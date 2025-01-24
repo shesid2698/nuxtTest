@@ -12,5 +12,8 @@
         <NuxtPage></NuxtPage>
     </div>
 </template>
-<style>
-</style>
+<script>
+onErrorCaptured(error=>{
+  console.log("錯誤了..",error);
+});
+</script>
