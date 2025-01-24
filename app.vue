@@ -8,7 +8,10 @@
             <NuxtPage></NuxtPage>
         </NuxtLayout> -->
 
+        <!-- throttle設定0為啟用 -->
+        <!-- <NuxtLoadingIndicator :throttle="100" height="10000"/> -->
 
+        <Loading></Loading>
         <NuxtPage></NuxtPage>
     </div>
 </template>
