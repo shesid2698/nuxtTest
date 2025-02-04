@@ -16,7 +16,7 @@ nuxtApp.hook('page:finish', () => {
     }, 1000);
 });
 onMounted(() => {
-    console.log(nuxtApp);
+
 });
 </script>
 <style>

@@ -21,6 +21,8 @@
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^3.5.2",
-    "@unocss/nuxt": "^65.4.3"
+    "@unocss/nuxt": "^65.4.3",
+    "google-auth-library": "^9.15.1",
+    "vue3-google-login": "^2.0.33"
   }
 }
