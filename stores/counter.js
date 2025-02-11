@@ -1,7 +1,7 @@
-import { defineStore } from "pinia";
+import { defineStore } from 'pinia';
 export const useCounterStore = defineStore('counter', {
     state: () => ({
-        count: 0,
+        sharedValue: '預設值',
     }),
     actions: {
         increment() {
@@ -9,6 +9,9 @@ export const useCounterStore = defineStore('counter', {
         },
         decrement() {
             this.count -= 1;
+        },
+        setSharedValue(newValue) {
+            this.sharedValue = newValue;
         },
     },
     getters: {

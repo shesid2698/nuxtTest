@@ -6,6 +6,8 @@ export default defineNuxtConfig({
     runtimeConfig: {
         public: {
             googleClientId: '505369110816-adbbmvem49jfer17pdcijimo5k21f724.apps.googleusercontent.com',
+            lineClientId: '2006854918',
+            lineSecret: 'eb7d59058338d314c01d78a6cd4a9e47',
         },
     },
 });

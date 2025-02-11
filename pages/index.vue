@@ -15,10 +15,13 @@
             <div>useState count2</div>
         </NuxtLink>
         {{ wade }}
+         <p>共用變數: {{ sharedValue }}</p>
+        <button @click="updateValue">修改變數</button>
     </div>
 </template>
 <script setup>
 const num = ref(10);
+const sharedValue = ref('預設值');
 const wade = useState('wade');
 const time = ref(Date.now());
 const tenNum = computed(() => num.value * 10);
@@ -29,6 +32,19 @@ const newTime = computed(() => {
     }, 1000);
     return new Date(time.value);
 });
-onMounted(() => {});
+const syncStorage = event => {
+    if (event.key === 'sharedValue') {
+        sharedValue.value = event.newValue;
+    }
+};
+const updateValue = () => {
+  const newValue = '來自這個頁面的更新';
+  localStorage.setItem('sharedValue', newValue);
+  sharedValue.value = newValue;
+};
+onMounted(() => {
+    window.addEventListener('storage', syncStorage);
+    localStorage.setItem("sharedValue","wad1231");
+});
 </script>
 <style scoped></style>
